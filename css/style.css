@@ -1,0 +1,179 @@
+@charset "UTF-8";
+.logo-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+form, .formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  margin: 0 1rem;
+}
+
+h1, h3 {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  background-color: #9F86C0;
+}
+
+h2 {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  background-color: #BE95C4;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background-color: dimgray;
+}
+a:hover {
+  background-color: #9F86C0;
+}
+
+.letra {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.imagenes {
+  display: grid;
+  justify-items: center;
+  max-width: 100%;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.imagenes img {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  object-fit: cover;
+}
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis {
+  display: none;
+}
+
+main p {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+p {
+  color: white;
+  background-color: #231942;
+  text-align: center;
+  margin: 5px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+/* *****************Estilos de Nosotros************* */
+.nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 0 10px;
+  align-items: center;
+}
+.nosotros p {
+  margin: 0 50px;
+  text-align: justify;
+}
+
+main section img {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  object-fit: cover;
+}
+
+/* *******************Estilos página de Registro********************* */
+.formulario {
+  align-items: center;
+}
+
+form {
+  width: 500px;
+  border: solid 5px #E0B1CB;
+  padding: 25px;
+  font-size: large;
+}
+
+label, input {
+  padding-left: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+}
+
+.envia {
+  margin: 20px 100px 0 100px;
+  height: 30px;
+}
+
+/*  -----------------------------------Media Queries----------------- */
+/* ***********************estilos para Tablet************** */
+@media screen and (min-width: 600px) {
+  .imagenes {
+    display: grid;
+    justify-items: center;
+    max-width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin: 5px;
+  }
+  footer section div {
+    width: 33%;
+    margin: 0 15px;
+  }
+}
+/* *********************Estilos para laptop-escritorio***************** */
+@media screen and (min-width: 1024px) {
+  .imagenes {
+    display: grid;
+    justify-items: center;
+    max-width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+  .uno, .dos, .tres, .cuatro, .cinco, .seis {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

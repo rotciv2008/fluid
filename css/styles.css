@@ -1,0 +1,30 @@
+h1 {
+  color: tomato;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+.forma{
+
+    
+    background-color: aqua;
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows:1fr 1fr ;
+    align-items: end;
+}
+
+.limite{
+
+    background-color: blueviolet;
+    /* height: 200px; */
+}
+
+header div img{
+
+    height: 100%;
+    width: 100%;
+}
