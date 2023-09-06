@@ -5,7 +5,7 @@
   justify-content: flex-end;
 }
 
-form, .formulario {
+form, .formulario, .nosotros {
   display: flex;
   flex-direction: column;
 }
@@ -100,9 +100,6 @@ p {
 
 /* *****************Estilos de Nosotros************* */
 .nosotros {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   margin: 0 10px;
   align-items: center;
 }
@@ -173,6 +170,13 @@ label, input {
   }
   .uno, .dos, .tres, .cuatro, .cinco, .seis {
     display: block;
+  }
+  .nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 0 10px;
+    align-items: center;
   }
 }
 
