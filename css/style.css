@@ -166,7 +166,7 @@ label, input {
     justify-items: center;
     max-width: 100%;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .uno, .dos, .tres, .cuatro, .cinco, .seis {
     display: block;
