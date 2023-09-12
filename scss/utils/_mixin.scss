@@ -1,0 +1,13 @@
+@mixin common-styles{
+    color: $palette-color-neutral;
+    background-color: $palette-color-one;
+    text-align: center;
+    margin: 5px 0;
+}
+
+@mixin grid-styles{
+    display:grid;
+    justify-items:center; 
+    max-width: 100%;
+    grid-template-rows: auto;
+}

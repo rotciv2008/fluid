@@ -1,0 +1,172 @@
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/extend";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+        }
+
+html{ 
+        font-size: 62.5%
+}
+
+body{
+    @include common-styles;        
+    margin: 0 1rem;
+}
+
+
+h1, h3{
+    @include common-styles;        
+    background-color: $palette-color-three;
+}
+
+h2{
+    @include common-styles;        
+    background-color: $palette-color-four;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: $palette-color-neutral;
+    background-color: dimgray;
+
+        &:hover{
+        background-color: $palette-color-three;
+    }}
+
+.letra{
+                @include common-styles;
+                font-size: 20px;
+}
+
+.imagenes{    
+    @include grid-styles;
+    grid-template-columns:(1fr);
+    gap: 10px;
+
+        img{
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            object-fit: cover;
+            }
+}
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis{
+    display: none;
+}
+
+main p{
+    @include common-styles;            
+    font-size: 20px;
+}
+
+p{
+    @include common-styles;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+/* *****************Estilos de Nosotros************* */
+
+.nosotros{
+    @extend %style-flex-col;
+    margin: 0 10px;
+    align-items:center;
+
+    p{
+        margin: 0 50px;
+        text-align: justify;
+    }
+    }
+
+main section img{
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            object-fit: cover;
+}
+
+/* *******************Estilos página de Registro********************* */
+
+.formulario{
+    @extend %style-flex-col;
+    align-items: center;
+
+}
+
+form{
+    @extend %style-flex-col;
+    width: 350px;
+    border: solid 5px $palette-color-five;
+    padding: 25px;
+    font-size: large;
+
+}
+
+label, input {
+
+            padding-left: 5px;
+            margin-bottom: 5px;
+            height: 30px;
+}
+
+.envia{
+    margin: 20px 100px 0 100px;
+    height: 30px;
+}
+
+.logo-menu{
+@extend %style-flex-row;
+}
+
+/*  -----------------------------------Media Queries----------------- */
+/* ***********************estilos para Tablet************** */
+
+@media screen and (min-width: 600px) {
+
+    .imagenes{            
+        @include grid-styles;
+        grid-template-columns: (1fr 1fr);
+    }
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin: 5px;
+       
+        div{
+            width: 33%;
+            margin: 0 15px;
+        }
+    }
+}
+
+
+   /* *********************Estilos para laptop-escritorio***************** */
+
+    @media screen and (min-width:1024px) {
+
+        .imagenes{    
+        @include grid-styles;
+        grid-template-columns: (1fr 1fr 1fr) ;
+        }
+
+        .uno, .dos, .tres, .cuatro, .cinco, .seis{
+            display:block;
+        } 
+
+.nosotros{
+
+    display: grid;
+    grid-template-columns: (1fr 1fr);
+    grid-template-rows:(auto);
+    margin: 0 10px;
+    align-items:center;
+}}
