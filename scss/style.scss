@@ -19,29 +19,38 @@ body{
 }
 
 
-h1, h3{
+h1 {
     @include common-styles;        
     background-color: $palette-color-three;
 }
 
 h2{
     @include common-styles;        
-    background-color: $palette-color-four;
+    background-color: $palette-color-two;
+}
+h3{
+    color: $palette-color-five;
+    font-size: large;
 }
 
 a{
     text-decoration: none;
     font-size: 20px;
     color: $palette-color-neutral;
-    background-color: dimgray;
+    background-color:$palette-color-one;
 
         &:hover{
         background-color: $palette-color-three;
     }}
 
+.horizontal{
+    @extend %style-flex-row;
+    list-style-type: none;
+}
+
 .letra{
-                @include common-styles;
-                font-size: 20px;
+        @include common-styles;
+        font-size: 20px;
 }
 
 .imagenes{    
@@ -50,8 +59,7 @@ a{
     gap: 10px;
 
         img{
-            height: 100%;
-            width: 100%;
+            @include base-styles(100%,100%);
             padding: 5px;
             object-fit: cover;
             }
@@ -66,10 +74,17 @@ main p{
     font-size: 20px;
 }
 
-p{
+.p-compra{
     @include common-styles;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    margin: 5px 15px;
+    padding: 5px 15px;
+    text-align:justify;
+    }
+
+.logo-menu{
+    @extend %style-flex-row;
 }
 
 /* *****************Estilos de Nosotros************* */
@@ -77,52 +92,77 @@ p{
 .nosotros{
     @extend %style-flex-col;
     margin: 0 10px;
-    align-items:center;
-
-    p{
-        margin: 0 50px;
-        text-align: justify;
-    }
-    }
+    align-items:center;}
 
 main section img{
-            height: 100%;
-            width: 100%;
+    @include base-styles(100%,100%);
             padding: 5px;
             object-fit: cover;
+            border-radius: 30px
 }
+.size{
+    @include base-styles(50px,50px);
+}
+
+.delineado{
+    border-style:dashed;
+    margin: 20px;
+    padding:10px;
+}
+
+.p-nos{
+    font-family: Edu+SA+Beginner, 'Times New Roman' serif;
+    font-size: 30px;
+    color: $palette-color-five;
+    margin: 0 50px;
+}
+
+
 
 /* *******************Estilos página de Registro********************* */
 
 .formulario{
     @extend %style-flex-col;
-    align-items: center;
-
+    align-items:center;    
+    margin: 10px 0;
 }
 
 form{
     @extend %style-flex-col;
-    width: 350px;
+    @include base-styles(400px,350px);
     border: solid 5px $palette-color-five;
     padding: 25px;
     font-size: large;
-
 }
 
 label, input {
-
-            padding-left: 5px;
-            margin-bottom: 5px;
-            height: 30px;
-}
-
-.envia{
-    margin: 20px 100px 0 100px;
+    padding-left: 5px;
+    margin-bottom: 5px;
     height: 30px;
 }
 
-.logo-menu{
-@extend %style-flex-row;
+.envia{
+margin: 20px 100px 0 100px;
+height: 30px;
+}
+
+.compra{
+    display: none;
+}
+
+/* ******************* FOOTER ********************** */
+
+.foot-style{
+    @extend %style-flex-row;
+    justify-content: space-around;
+    
+}
+.p-foot{
+    font-size: 16px;
+    margin: 10px;
+}
+footer {
+    background-color: black;
 }
 
 /*  -----------------------------------Media Queries----------------- */
@@ -135,19 +175,16 @@ label, input {
         grid-template-columns: (1fr 1fr);
     }
 
-footer section {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    margin: 5px;
-       
-        div{
-            width: 33%;
-            margin: 0 15px;
-        }
+    .registro{
+        display: flex;
+        margin: 0 0 20px 0;        
+    }
+
+    .formulario{
+        margin:0 10px;
+        padding:1px;
     }
 }
-
 
    /* *********************Estilos para laptop-escritorio***************** */
 
@@ -169,4 +206,40 @@ footer section {
     grid-template-rows:(auto);
     margin: 0 10px;
     align-items:center;
-}}
+}
+.registro{
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+/* adaptación página registro */
+.compra{
+    display: block;
+    align-self:self-end;
+    margin: 0 25px;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: stretch;
+    margin: 5px;
+
+        div{
+            width: 33%;
+            margin: 5px;
+        }
+    }
+
+    .size{
+        @include base-styles(150px,150px);
+}
+.afoot{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: $palette-color-one;
+    &:hover{
+        background-color: $palette-color-one;
+    }
+}
+
+}

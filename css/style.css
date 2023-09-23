@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.logo-menu {
+.foot-style, .logo-menu, .horizontal {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -28,7 +28,7 @@ body {
   margin: 0 1rem;
 }
 
-h1, h3 {
+h1 {
   color: white;
   background-color: #231942;
   text-align: center;
@@ -41,17 +41,26 @@ h2 {
   background-color: #231942;
   text-align: center;
   margin: 5px 0;
-  background-color: #BE95C4;
+  background-color: #5E548E;
+}
+
+h3 {
+  color: #E0B1CB;
+  font-size: large;
 }
 
 a {
   text-decoration: none;
   font-size: 20px;
   color: white;
-  background-color: dimgray;
+  background-color: #231942;
 }
 a:hover {
   background-color: #9F86C0;
+}
+
+.horizontal {
+  list-style-type: none;
 }
 
 .letra {
@@ -89,13 +98,16 @@ main p {
   font-size: 20px;
 }
 
-p {
+.p-compra {
   color: white;
   background-color: #231942;
   text-align: center;
   margin: 5px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  margin: 5px 15px;
+  padding: 5px 15px;
+  text-align: justify;
 }
 
 /* *****************Estilos de Nosotros************* */
@@ -103,24 +115,41 @@ p {
   margin: 0 10px;
   align-items: center;
 }
-.nosotros p {
-  margin: 0 50px;
-  text-align: justify;
-}
 
 main section img {
   height: 100%;
   width: 100%;
   padding: 5px;
   object-fit: cover;
+  border-radius: 30px;
+}
+
+.size {
+  height: 50px;
+  width: 50px;
+}
+
+.delineado {
+  border-style: dashed;
+  margin: 20px;
+  padding: 10px;
+}
+
+.p-nos {
+  font-family: EduSABeginner, "Times New Roman" serif;
+  font-size: 30px;
+  color: #E0B1CB;
+  margin: 0 50px;
 }
 
 /* *******************Estilos página de Registro********************* */
 .formulario {
   align-items: center;
+  margin: 10px 0;
 }
 
 form {
+  height: 400px;
   width: 350px;
   border: solid 5px #E0B1CB;
   padding: 25px;
@@ -138,6 +167,24 @@ label, input {
   height: 30px;
 }
 
+.compra {
+  display: none;
+}
+
+/* ******************* FOOTER ********************** */
+.foot-style {
+  justify-content: space-around;
+}
+
+.p-foot {
+  font-size: 16px;
+  margin: 10px;
+}
+
+footer {
+  background-color: black;
+}
+
 /*  -----------------------------------Media Queries----------------- */
 /* ***********************estilos para Tablet************** */
 @media screen and (min-width: 600px) {
@@ -148,15 +195,13 @@ label, input {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
   }
-  footer section {
+  .registro {
     display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    margin: 5px;
+    margin: 0 0 20px 0;
   }
-  footer section div {
-    width: 33%;
-    margin: 0 15px;
+  .formulario {
+    margin: 0 10px;
+    padding: 1px;
   }
 }
 /* *********************Estilos para laptop-escritorio***************** */
@@ -177,6 +222,37 @@ label, input {
     grid-template-rows: auto;
     margin: 0 10px;
     align-items: center;
+  }
+  .registro {
+    display: flex;
+    margin: 0 0 20px 0;
+  }
+  /* adaptación página registro */
+  .compra {
+    display: block;
+    align-self: self-end;
+    margin: 0 25px;
+  }
+  .descripcion {
+    display: flex;
+    justify-content: stretch;
+    margin: 5px;
+  }
+  .descripcion div {
+    width: 33%;
+    margin: 5px;
+  }
+  .size {
+    height: 150px;
+    width: 150px;
+  }
+  .afoot {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #231942;
+  }
+  .afoot:hover {
+    background-color: #231942;
   }
 }
 
